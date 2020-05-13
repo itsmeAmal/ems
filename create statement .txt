@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS `project_employee_management`.`monthly_salary`;
+CREATE TABLE  `project_employee_management`.`monthly_salary` (
+  `monthly_salary_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `monthly_salary_emp_id` int(10) unsigned DEFAULT NULL,
+  `monthly_salary_date` date DEFAULT NULL,
+  `monthly_salary_basic_salary` decimal(10,2) DEFAULT '0.00',
+  `monthly_salary_fixed_allowence` decimal(10,2) DEFAULT '0.00',
+  `monthly_salary_other_allowance` decimal(10,2) DEFAULT '0.00',
+  `monthly_salary_deduction` decimal(10,2) DEFAULT '0.00',
+  `monthly_salary_note` varchar(450) DEFAULT NULL,
+  `monthly_salary_payment_status` tinyint(1) unsigned DEFAULT '0',
+  `monthly_salary_status` int(10) unsigned DEFAULT '1',
+  PRIMARY KEY (`monthly_salary_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
